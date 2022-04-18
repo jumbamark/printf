@@ -14,11 +14,7 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-<<<<<<< HEAD
-		printf("%s", format[i]);
-=======
 		printf("%c", format[i]);
->>>>>>> 2f1405bf8e4e4aeb02339419cece9efda50f28ad
 		sum++;
 		i++;
 	}
