@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -13,6 +14,7 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
+		printf("%s", format[i]);
 		sum++;
 		i++;
 	}
