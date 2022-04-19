@@ -25,5 +25,5 @@ int (*converter(char s))(va_list)
 			return (types_array[n].T);
 		}
 	}
-	return (0)
+	return (0);
 }
