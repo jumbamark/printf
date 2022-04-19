@@ -17,7 +17,9 @@ int _printf(const char *format, ...)
 	for (; format[n] != '\0'; n++)
 	{
 		if (format[n] == '\0')
+		{
 			break;
+		}
 		else if (format[n] == '%' && format[n + 1])
 		{
 			sum += (*converter(format[n + 1]))(arguments);
