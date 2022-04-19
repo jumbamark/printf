@@ -13,7 +13,7 @@ int print_digit(va_list int_list)
 	int n, division, length;
 	unsigned int num;
 
-	i = va_arg(int_list, int);
+	n = va_arg(int_list, int);
 	division = 1;
 	length = 0;
 
