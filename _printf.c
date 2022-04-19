@@ -38,6 +38,7 @@ int _printf(const char *format, ...)
 				sum += _putchar(format[n]);
 			}
 		}
+	}
 	va_end(arguments);
 
 	return (sum);
