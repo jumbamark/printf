@@ -7,6 +7,13 @@ int _putchar(char c);
 int print_str(va_list str_list);
 int print_char(va_list char_list);
 int percentage(__attribute__((unused))va_list param);
+int (*converter(char s))(va_list);
+
+/**
+ * struct format - structure
+ * @F: char holding the format
+ * @T: pointer function
+ */
 
 typedef struct format
 {
