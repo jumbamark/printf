@@ -5,14 +5,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
-#include <stdlib.h>
-
-int _printf(const char *format, ...);
-int _putchar(char c);
-int print_str(va_list str_list);
-int print_char(va_list char_list);
-int percentage(__attribute__((unused))va_list param);
-int (*converter(char s))(va_list);
 
 /**
  * struct format - structure
@@ -25,5 +17,13 @@ typedef struct format
 	char F;
 	int (*T)(va_list);
 } fmt;
+
+int _printf(const char *format, ...);
+int _putchar(char c);
+int print_str(va_list str_list);
+int print_char(va_list char_list);
+int percentage(__attribute__((unused))va_list param);
+int (*converter(char s))(va_list);
+int print_digit(va_list intlist);
 
 #endif /* MAIN_H */
