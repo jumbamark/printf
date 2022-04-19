@@ -3,5 +3,15 @@
 #include <stdio.h>
 
 int _printf(const char *format, ...);
+int _putchar(char c);
+int print_str(va_list str_list);
+int print_char(va_list char_list);
+int percentage(__attribute__((unused))va_list param);
+
+typedef struct format
+{
+	char F;
+	int (*T)(va_list);
+} fmt;
 
 #endif /* MAIN_H */
