@@ -10,10 +10,12 @@
 int (*converter(char s))(va_list)
 {
 	fmt types_array[] = {
+		{'d', print_digit},
+		{'i', print_digit},
 		{'c', print_char},
 		{'s', print_str},
 		{'%', percentage},
-		{NULL, NULL}
+		{'\0', NULL}
 	};
 
 	int n = 0;
@@ -22,8 +24,8 @@ int (*converter(char s))(va_list)
 	{
 		if (types_array[n].F == s)
 		{
-			return (types_array[n].T);
+			break;
 		}
 	}
-	return (0);
+	return (types_array[n].T);
 }
