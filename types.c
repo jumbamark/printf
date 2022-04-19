@@ -12,7 +12,7 @@ int (*converter(char s))(va_list)
 	fmt types_array[] = {
 		{'c', print_char},
 		{'s', print_str},
-		{'%', percentage}
+		{'%', percentage},
 		{NULL, NULL}
 	};
 
@@ -20,7 +20,7 @@ int (*converter(char s))(va_list)
 
 	for (; types_array[n].F != '\0'; n++)
 	{
-		if (types_array[i].F == s)
+		if (types_array[n].F == s)
 		{
 			return (types_array[n].T);
 		}
