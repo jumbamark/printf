@@ -26,6 +26,11 @@ int print_str(va_list str_list)
 	int n = 0;
 	char *s = va_arg(str_list, char *);
 
+	if (s == NULL)
+	{
+		s = "(null)";
+	}
+
 	for (; s[n] != '\0'; n++)
 	{
 		_putchar(s[n]);
